@@ -1,0 +1,199 @@
+/* Common styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.social-buttons button {
+    margin-right: 10px; /* Add margin-right for spacing */
+    padding: 10px 20px; /* Increase padding for larger buttons */
+    font-size: 14px; /* Increase font size for larger buttons */
+}
+
+.social-buttons button:last-child {
+    margin-right: 0; /* Remove margin-right for the last button */
+}
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.or-divider hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #181616;
+}
+
+.or-divider span {
+    margin: 0 10px;
+    color: #1f1b1b;
+    font-weight: bold;
+}
+
+/* Home specific styles 
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.input-group button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px; /* Rounded edges 
+}
+
+.job-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.job-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px; /* Rounded edges 
+}
+
+.job-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+*/
+
+/* Login and Signup specific styles */
+
+.left-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 63%; /* Adjust width as needed */
+    height: auto;
+}
+
+.register-message {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form input,
+.signup-form input {
+    display: block;
+    width: 60%; /* Adjust width as needed */
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.login-form button,
+.signup-form button {
+    width: 60%; /* Adjust width as needed */
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.forgot-password {
+    text-align: right;
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* CSS for divider blocks */
+.divider-block {
+    text-align: center; /* Align text in the center */
+    margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+.divider-block p {
+    background-color: #f0f0f0; /* Background color for the block */
+    padding: 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block; /* Display as inline block to fit content */
+    color: #333; /* Text color */
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='basic.css') }}"> <!-- Link to external CSS file -->
+</head>
+<body>
+
+<header>
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+    <nav>
+        <h3></h3>
+    </nav>
+</header>
+
+<div class="main-content">
+    <div class="job-buttons">
+        <div class="job-button">
+            <a href="{{ url_for('get_jobs', job_title='Software Engineer') }}">
+                Software Engineer
+            </a>
+        </div>
+        <div class="job-button">
+            <a href="{{ url_for('get_jobs', job_title='Data Scientist') }}">
+                Data Scientist
+            </a>
+        </div>
+        <div class="job-button">
+            <a href="{{ url_for('get_jobs', job_title='Frontend Developer') }}">
+                Frontend Developer
+            </a>
+        </div>
+        <div class="job-button">
+            <a href="{{ url_for('get_jobs', job_title='Backend Developer') }}">
+                Backend Developer
+            </a>
+        </div>
+        <div class="job-button">
+            <a href="{{ url_for('get_jobs', job_title='Java Developer') }}">
+                Java Developer
+            </a>
+        </div>
+        <div class="job-button">
+            <a href="{{ url_for('get_jobs', job_title='Python Developer') }}">
+                Python Developer
+            </a>
+        </div>
+        <div class="job-button">
+            <a href="{{ url_for('get_jobs', job_title='Product Analyst') }}">
+                Product Analyst
+            </a>
+        </div>
+        <div class="job-button">
+            <a href="{{ url_for('get_jobs', job_title='Account Manager') }}">
+                Account Manager
+            </a>
+        </div>   
+    </div>
+     <!-- Divider blocks -->
+    <div class="divider-block">
+        <a href="{{ url_for('content') }}">
+            <p>Content Based Filtering</p>
+        </a>
+    </div>
+    <div class="divider-block">
+        <a href="{{ url_for('resume') }}">
+            <p>Resume Analysis</p>
+        </a>
+    </div>
+</div>
+
+
+</body>
+</html>

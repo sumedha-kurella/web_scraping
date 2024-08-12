@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='basic.css') }}"> <!-- Link to external CSS file -->
+
+</head>
+<body>
+    <script>
+        function updateFileName() {
+    var input = document.getElementById('resume');
+    var fileName = input.files[0].name;
+    document.getElementById('file-name').textContent = fileName;
+    }
+
+    </script>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('content') }}">Content based filtering</a>
+        </nav>
+    </header>
+    <h2 align="center">Upload Your Resume</h2>
+    
+    
+    <form method="POST" enctype="multipart/form-data" action="/submit_resume">
+        <label for="resume" class="file-input-label">Choose File</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" class="file-input" onchange="updateFileName()">
+        <span id="file-name">No file chosen</span>
+        <input type="submit" value="Upload" class="upload-btn">
+    </form>
+    
+    <!-- Display recommended jobs -->
+    <h2>&ensp;Recommendations for you :</h2>
+    <div class="job-list">
+        {% if jobs %}
+            {% for job in jobs %}
+                <div class="job">
+                    <h3><i>{{ job['Job Title'] }}</i></h3>
+                    <p><strong>Company:</strong> {{ job['Company Name'] }}</p>
+                    <p><strong>Salary:</strong> {{ job['Salary'] }}</p>
+                    <p><strong>Date Posted:</strong> {{ job['Date Posted'] }}</p>
+                    <p><strong>Location:</strong> {{ job['Location'] }}</p>
+                    <p><strong>Skills:</strong> {{ job['Skills'] }}</p>
+                    <p><strong>URL:</strong> <a href="{{ job['URL'] }}" target="_blank">{{ job['URL'] }}</a></p>
+                </div>
+            {% endfor %}
+        {% else %}
+        <p>please provide the inputs for recommendations</p>
+        {% endif %}
+    </div>
+</body>
+</html>

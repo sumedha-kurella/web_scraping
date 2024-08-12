@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='basic.css') }}"> <!-- Link to external CSS file -->
+
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('resume') }}">Resume Analysis</a>
+        </nav>
+    </header>
+    <h2 align="center">Enter Your Preference</h2>
+    <!-- Form for job submission -->
+    <form action="/content" method="post">
+        <div class="qsbWrapper">
+            <input type="text" placeholder="Enter job role " name="job_title" required>
+            <input type="text" placeholder="Experience" name="experience" required>
+            <button type="submit">Search</button>
+        </div>
+    </form>
+
+    <!-- Display recommended jobs -->
+    <h2>&nbsp;Recommendations for you :</h2>
+    <div class="job-list">
+        {% if jobs %}
+            {% set sorted_jobs = jobs | sort(attribute='Date Posted', reverse=true) %}
+            {% for job in jobs %}
+                <div class="job">
+                    <h3><i>{{ job['Job Title'] }}</i></h3>
+                    <p><strong>Company:</strong> {{ job['Company Name'] }}</p>
+                    <p><strong>Experience:</strong> {{ job['Experience'] }}</p>
+                    <p><strong>Salary:</strong> {{ job['Salary'] }}</p>
+                    <p><strong>Date Posted:</strong> {{ job['Date Posted'] }}</p>
+                    <p><strong>Location:</strong> {{ job['Location'] }}</p>
+                    <p><strong>Skills:</strong> {{ job['Skills'] }}</p>
+                    <p><strong>URL:</strong> <a href="{{ job['URL'] }}" target="_blank">{{ job['URL'] }}</a></p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>please provide the inputs for recommendations</p>
+        {% endif %}
+    </div>
+</body>
+</html>

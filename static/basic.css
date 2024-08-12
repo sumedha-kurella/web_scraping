@@ -1,0 +1,295 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:70px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+/* Main content styles */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+/* Form styles */
+form {
+    margin-bottom: 20px;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #ff8c00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/* Job button styles */
+.job-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    align-items: center;
+    margin-top: 20px;
+}
+
+.job-button {
+    padding: 15px 40px; /* Increase button size */
+    /*background-color: #00c8ff;*/
+    background-color: rgba(113, 205, 230, 0.884);
+    color: #000; /* Set button text color to black */
+    border: none;
+    cursor: pointer;
+    margin: 10px; /* Increase gap between buttons */
+    display: flex;
+    align-items: center;
+    border-radius: 20px; /* Rounded edges */
+    text-decoration: none; /* Remove underlines */
+    flex: 1 0 45%; /* Set button width and allow it to shrink */
+    max-width: 250px; /* Limit maximum button width */
+    text-align: center; /* Align button text */
+    justify-content: center; /* Align button content */
+}
+
+.job-button:hover {
+    background-color: #7dc8db; /* Change background color on hover */
+}
+
+
+
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Job listing styles */
+.job-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.job {
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.job h3 {
+    margin-bottom: 10px;
+}
+
+.job p {
+    margin-bottom: 5px;
+}
+
+.job-button a {
+    color: #000; /* Set initial text color to black */
+    text-decoration: none; /* Remove underlines */
+}
+
+.job a:hover {
+    text-decoration: underline;
+}
+
+
+/* Divider block styles */
+.divider-block {
+    padding: 20px; /* Increase padding */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 10px; /* Add border radius */
+    margin-bottom: 20px; /* Add margin to separate blocks */
+    margin-top:30px;
+    background-color: #478abda9;
+}
+
+.divider-block a {
+    color: #000; /* Set initial text color to black */
+    text-decoration: none; /* Remove underlines */
+}
+
+/* Prevent visited link text color change */
+.job-button a:visited,
+.divider-block a:visited {
+    color: #000; /* Set visited link text color to black */
+}
+
+#form styles
+.container {
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+form {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 20px; /* Padding around the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    max-width: 400px; /* Limiting form width */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+form div {
+    margin-bottom: 15px; /* Spacing between form elements */
+}
+
+form label {
+    display: block; /* Display labels as blocks for better alignment */
+    margin-bottom: 5px; /* Spacing below labels */
+}
+
+form input[type="text"] {
+    width: 100%; /* Full width text input */
+    padding: 8px; /* Padding inside the text input */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+}
+
+button[type="submit"] {
+    background-color: #8daac9; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+}
+
+button[type="submit"]:hover {
+    background-color: #8daac9; /* Darker background color on hover */
+}
+
+
+.qsbWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.qsbWrapper input[type="text"] {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.qsbWrapper button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+h2 {
+    margin-top: 15px;;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    margin-left: 15px;
+}
+
+/* CSS to style the navigation links */
+nav a {
+    font-size: 20px; /* Set the font size to 20 pixels */
+}
+
+/* Change color on hover */
+nav a:hover {
+    color: rgb(255, 115, 0); /* Change color to blue when hovered over */
+}
+
+
+/* Style for the file input container */
+.file-input-label {
+    background-color:#272728; /* Green background */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 8px;
+}
+
+/* Style for the file input */
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer; /* Cursor on hover */
+}
+
+/* Style for the upload button */
+.upload-btn {
+    background-color:rgb(255, 115, 0);/* Green background */
+    color: white; /* White text color */
+    padding: 10px 10px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Font size */
+    margin-top: 10px; /* Top margin */
+    margin-left: 140px;
+    cursor: pointer; 
+    border-radius: 14px;
+    transition: background-color 0.3s;/* Cursor on hover */
+}
+.upload-btn:hover {
+    background-color: #8daac9; /* Blue background on hover */
+}
